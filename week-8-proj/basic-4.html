@@ -1,8 +1,15 @@
-<!-- We define a scene -->
-<a-scene artoolkit='detectionMode: mono_matrix; sourceType: webcam;'>  
-	<!-- here, put the content of your scene -->
-        <!-- add a box in the scene -->
-        <a-box></a-box> 
-        <!-- add a basic camera -->
-        <a-entity camera></a-entity>
-</a-scene>
+
+
+<!-- AR.js by @jerome_etienne - github: https://github.com/jeromeetienne/ar.js - info: https://medium.com/arjs/augmented-reality-in-10-lines-of-html-4e193ea9fdbf -->
+<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script>
+<body style='margin : 0px; overflow: hidden;'><!-- We define a scene -->
+	<a-scene artoolkit='detectionMode: mono_matrix; sourceType: webcam;'>  
+		<!-- here, put the content of your scene -->
+	        <!-- add a box in the scene -->
+	        <a-box></a-box> 
+	        <!-- add a basic camera -->
+	        <a-entity camera></a-entity>
+	    <a-marker type='pattern' url='data/patt.hiro' ></a-marker>
+	</a-scene>
+</body>
