@@ -59,5 +59,27 @@
 		<!-- add a simple camera -->
 		<a-entity camera></a-entity>
 	</a-scene>
+	<script>
+		var elapsed = 0;
+		var interval;
+		var total = 60 * 20; // 20 mins in seconds
+
+		function showElapsedTime() {
+		    if(elapsed < total) {
+		        elapsed += 1;
+		        // If you want you can convert the seconds elapsed to minutes and seconds here before you display them
+		        // $('#elapsed').html(elapsed);
+		        console.log(elapsed);
+		    }
+		    else {
+		        clearInterval(interval);
+		        alert('Done');
+		    }
+		}
+
+		$(function(){
+		    interval = setInterval(showElapsedTime, 1000);
+		});
+	</script>
 </body>
 </html>
