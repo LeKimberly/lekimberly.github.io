@@ -68,13 +68,10 @@
 		    // change text if necessary
 		    if (elapsed == 0) {
 				$('#1').attr('text', 'value: hi im mouse when elapsed is 0');
-		        console.log(elapsed);
 		    } else if (elapsed/changeTextInterval == 1) {
 				$('#1').attr('text', 'value: bye im mouse when elapsed is 3');
-		        console.log(elapsed);
-		  //   } else if (elapsed / (changeTextInterval*3) == 0) {
-				// $('#1').attr('text', 'bye bye');
-		  //       console.log(elapsed);
+		    } else if (elapsed / (changeTextInterval*3) == 0) {
+				$('#1').attr('text', 'bye bye');
 		    }
 
 			// increment by 1 sec, or reset time
