@@ -12,38 +12,38 @@
 		</a-marker>
 
 		<!-- handle mouse marker -->
-		<a-marker id='1' type='pattern' url='data/mouse.patt'>
-			<a-entity position='0.5 0 -1' rotation='-45 0 0' scale='4 8 16' text='value: hi im mouse;'></a-entity>
+		<a-marker type='pattern' url='data/mouse.patt'>
+			<a-entity id='1' position='0.5 0 -1' rotation='-45 0 0' scale='4 8 16' text='value: hi im mouse;'></a-entity>
 		</a-marker>
 		
 		<!-- handle keyboard marker -->
-		<a-marker id='2' type='pattern' url='data/keyboard-2.patt'>
-			<a-entity position='0.5 0 -1' rotation='-45 0 0' scale='4 8 16' text='value: hi im keyboard;'></a-entity>
+		<a-marker type='pattern' url='data/keyboard-2.patt'>
+			<a-entity id='2' position='0.5 0 -1' rotation='-45 0 0' scale='4 8 16' text='value: hi im keyboard;'></a-entity>
 		</a-marker>
 
 		<!-- handle battery marker -->
-		<a-marker id='3' type='pattern' url='data/battery.patt'>
-			<a-entity position='0.5 0 -1' rotation='-45 0 0' scale='4 8 16' text='value: hi im battery;'></a-entity>
+		<a-marker type='pattern' url='data/battery.patt'>
+			<a-entity id='3' position='0.5 0 -1' rotation='-45 0 0' scale='4 8 16' text='value: hi im battery;'></a-entity>
 		</a-marker>
 
 		<!-- handle bluetooth marker -->
-		<a-marker id='4' type='pattern' url='data/bluetooth.patt'>
-			<a-entity position='0.5 0 -1' rotation='-45 0 0' scale='4 8 16' text='value: hi im bluetooth;'></a-entity>
+		<a-marker type='pattern' url='data/bluetooth.patt'>
+			<a-entity id='4' position='0.5 0 -1' rotation='-45 0 0' scale='4 8 16' text='value: hi im bluetooth;'></a-entity>
 		</a-marker>
 
 		<!-- handle cd-rom marker -->
-		<a-marker id='5' type='pattern' url='data/cd-rom.patt'>
-			<a-entity position='0.5 0 -1' rotation='-45 0 0' scale='4 8 16' text='value: hi im cd-rom;'></a-entity>
+		<a-marker type='pattern' url='data/cd-rom.patt'>
+			<a-entity id='5' position='0.5 0 -1' rotation='-45 0 0' scale='4 8 16' text='value: hi im cd-rom;'></a-entity>
 		</a-marker>
 
 		<!-- handle headphones marker -->
-		<a-marker id='6' type='pattern' url='data/headphones.patt'>
-			<a-entity position='0.5 0 -1' rotation='-45 0 0' scale='4 8 16' text='value: hi im headphones;'></a-entity>
+		<a-marker type='pattern' url='data/headphones.patt'>
+			<a-entity id='6' position='0.5 0 -1' rotation='-45 0 0' scale='4 8 16' text='value: hi im headphones;'></a-entity>
 		</a-marker>
 
 		<!-- handle smart-phone marker -->
-		<a-marker id='7' type='pattern' url='data/smart-phone.patt'>
-			<a-entity position='0.5 0 -1' rotation='-45 0 0' scale='4 8 16' text='value: hi im smartphone;'></a-entity>
+		<a-marker type='pattern' url='data/smart-phone.patt'>
+			<a-entity id='7' position='0.5 0 -1' rotation='-45 0 0' scale='4 8 16' text='value: hi im smartphone;'></a-entity>
 		</a-marker>
 
 		<!-- handle speaker marker -->
@@ -76,7 +76,7 @@
 
 		    // change text if necessary
 		    if(elapsed % changeTextInterval == 0) {
-				// $('#').attr('text', 'bye bye');
+				$('#1').attr('text', 'bye bye');
 		        console.log(elapsed);
 		    }
 		}
