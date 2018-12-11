@@ -12,48 +12,48 @@
 		</a-marker>
 
 		<!-- handle mouse marker -->
-		<a-marker type='pattern' url='data/mouse.patt'>
+		<a-marker id='1' type='pattern' url='data/mouse.patt'>
 			<a-entity position='0.5 0 -1' rotation='-45 0 0' scale='4 8 16' text='value: hi im mouse;'></a-entity>
 		</a-marker>
 		
 		<!-- handle keyboard marker -->
-		<a-marker type='pattern' url='data/keyboard-2.patt'>
+		<a-marker id='2' type='pattern' url='data/keyboard-2.patt'>
 			<a-entity position='0.5 0 -1' rotation='-45 0 0' scale='4 8 16' text='value: hi im keyboard;'></a-entity>
 		</a-marker>
 
 		<!-- handle battery marker -->
-		<a-marker type='pattern' url='data/battery.patt'>
+		<a-marker id='3' type='pattern' url='data/battery.patt'>
 			<a-entity position='0.5 0 -1' rotation='-45 0 0' scale='4 8 16' text='value: hi im battery;'></a-entity>
 		</a-marker>
 
 		<!-- handle bluetooth marker -->
-		<a-marker type='pattern' url='data/bluetooth.patt'>
+		<a-marker id='4' type='pattern' url='data/bluetooth.patt'>
 			<a-entity position='0.5 0 -1' rotation='-45 0 0' scale='4 8 16' text='value: hi im bluetooth;'></a-entity>
 		</a-marker>
 
 		<!-- handle cd-rom marker -->
-		<a-marker type='pattern' url='data/cd-rom.patt'>
+		<a-marker id='5' type='pattern' url='data/cd-rom.patt'>
 			<a-entity position='0.5 0 -1' rotation='-45 0 0' scale='4 8 16' text='value: hi im cd-rom;'></a-entity>
 		</a-marker>
 
 		<!-- handle headphones marker -->
-		<a-marker type='pattern' url='data/headphones.patt'>
+		<a-marker id='6' type='pattern' url='data/headphones.patt'>
 			<a-entity position='0.5 0 -1' rotation='-45 0 0' scale='4 8 16' text='value: hi im headphones;'></a-entity>
 		</a-marker>
 
 		<!-- handle smart-phone marker -->
-		<a-marker type='pattern' url='data/smart-phone.patt'>
+		<a-marker id='7' type='pattern' url='data/smart-phone.patt'>
 			<a-entity position='0.5 0 -1' rotation='-45 0 0' scale='4 8 16' text='value: hi im smartphone;'></a-entity>
 		</a-marker>
 
 		<!-- handle speaker marker -->
 		<a-marker type='pattern' url='data/speaker.patt'>
-			<a-entity position='0.5 0 -1' rotation='-45 0 0' scale='4 8 16' text='value: hi im speaker;'></a-entity>
+			<a-entity id='8' position='0.5 0 -1' rotation='-45 0 0' scale='4 8 16' text='value: hi im speaker;'></a-entity>
 		</a-marker>
 
 		<!-- handle wifi marker -->
 		<a-marker type='pattern' url='data/wifi.patt'>
-			<a-entity position='0.5 0 -1' rotation='-45 0 0' scale='4 8 16' text='value: hi im wifi;'></a-entity>
+			<a-entity id='9' position='0.5 0 -1' rotation='-45 0 0' scale='4 8 16' text='value: hi im wifi;'></a-entity>
 		</a-marker>
 		
 		<!-- add a simple camera -->
@@ -62,23 +62,27 @@
 	<script>
 		var elapsed = 0;
 		var interval;
-		var total = 60 * 20; // 20 mins in seconds
+		var changeTextInterval = 3; // 60 seconds
 
-		function showElapsedTime() {
-		    if(elapsed < total) {
-		        elapsed += 1;
-		        // If you want you can convert the seconds elapsed to minutes and seconds here before you display them
-		        // $('#elapsed').html(elapsed);
-		        console.log(elapsed);
+		function elapseTime() {
+
+			// increment by 1 sec, or reset time
+			if (elapsed < changeTextInterval*3) {
+				elapsed += 1;
+		        // console.log(elapsed);
+			} else {
+		        elapsed = 0;
 		    }
-		    else {
-		        clearInterval(interval);
-		        alert('Done');
+
+		    // change text if necessary
+		    if(elapse % changeTextInterval == 0) {
+				// $('#').attr('text', 'bye bye');
+		        console.log(elapsed);
 		    }
 		}
 
 		$(function(){
-		    interval = setInterval(showElapsedTime, 1000);
+		    interval = setInterval(elapseTime, 1000);
 		});
 	</script>
 </body>
